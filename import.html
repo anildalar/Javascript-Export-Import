@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+        <script>
+
+        </script>
+    </head>
+    <body>
+	
+	
+        <script type="module">
+			//import {Something} from 'somelibrary';
+            import { MyClass,name,anil,students } from './export.js'; //Named Imports
+            import * as M from './export.js'; // Imports
+			
+			
+			
+			console.log(M.name);
+			console.log(name);
+			//Create object
+			let obj = new MyClass();
+			obj.showName();
+			
+			let obj2 = new M.MyClass();
+			obj2.showName();
+			
+			anil();
+			M.anil();
+			
+			students.displayName('Anil');
+			M.students.displayName('Anil');
+        </script>
+    </body>
+</html>
